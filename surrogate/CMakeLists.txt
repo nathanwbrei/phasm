@@ -9,6 +9,7 @@ set(SURROGATE_LIBRARY_SOURCES
         src/tensor.cpp
         src/plugin_loader.cc
         src/flamegraph.cpp
+        src/omnitensor.cpp
         )
 
 add_library(phasm-surrogate STATIC ${SURROGATE_LIBRARY_SOURCES})
@@ -38,6 +39,7 @@ set(SURROGATE_LIBRARY_TEST_SOURCES
         test/plugin_tests.cc
         test/optics_oop_tests.cpp
         test/flamegraph_tests.cpp
+        test/omnitensor_tests.cpp
         )
 add_executable("phasm-surrogate-tests" ${SURROGATE_LIBRARY_TEST_SOURCES})
 target_include_directories(phasm-surrogate-tests PRIVATE include ../memtrace/include)
